@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+     데이터를 100000건을 불러오자 먹통이된다.
+	 이는 싱글쓰레드를 사용하는 자바스크립트의 취악점이다.
+	 100000건이 다 그려지는동안 브라우저는 아무것도 못하는 먹통 상태가 된다.
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #popup {
+      position: absolute;
+      overflow: auto;
+      width: 300px;
+      height: 200px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<span id="counter" style="font-size: 24px">0</span>
+<div id="selectbox">
+  <span id="title">이건 셀렉트박스</span>
+  <div id="popup">
+    <ul id="list"></ul>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
